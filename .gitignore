@@ -1,0 +1,5 @@
+.idea/
+test.py
+dump.txt
+src/__pycache__/
+application/inference/__pycache__/
