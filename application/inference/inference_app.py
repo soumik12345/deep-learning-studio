@@ -6,11 +6,6 @@ from .utils import get_overlayed_image, visualize_classification_prediction
 
 
 def inference_branch_app():
-    st.markdown(
-        '<h1>GradCam Application</h1><hr><br>',
-        unsafe_allow_html=True
-    )
-
     # ./assets/cat_1.jpg
     image_path = st.sidebar.file_uploader('Please Select a File')
     if image_path is not None:
