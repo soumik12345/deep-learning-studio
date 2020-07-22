@@ -27,11 +27,7 @@ def visualize_prediction_probablities(prediction):
         unsafe_allow_html=True
     )
     plotly_figure = visualize_classification_prediction(prediction)
-    pred_probability_checkbox = st.checkbox(
-        'Maximize', value=True, key='pred_probability_checkbox'
-    )
-    if pred_probability_checkbox:
-        st.plotly_chart(plotly_figure, use_container_width=True)
+    st.plotly_chart(plotly_figure, use_container_width=True)
 
 
 def visualize_gradcam(
@@ -58,11 +54,7 @@ def visualize_gradcam(
         original_size, weightage=0.7
     )
 
-    gradcam_checkbox = st.checkbox(
-        'Maximize', value=True, key='gradcam_checkbox'
-    )
-    if gradcam_checkbox:
-        st.image(overlayed_image)
+    st.image(overlayed_image)
 
 
 def inference_branch_app():

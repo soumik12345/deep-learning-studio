@@ -9,10 +9,16 @@ def run_app():
     )
     action_option = st.selectbox(
         'What\'d yeh wanna do Harry?',
-        ('', 'Inference on Pre-trained Model', 'Transfer Learning', 'Inference (Not Implemented)')
+        ('', 'Inference on Pre-trained Model', 'Transfer Learning', 'Inference')
     )
     if action_option == 'Inference on Pre-trained Model':
         inference_branch_app()
+    elif action_option == 'Transfer Learning':
+        st.warning('Under Development')
+    elif action_option == 'Inference':
+        st.error('Not yet implemented')
+    elif action_option != '':
+        st.error('Action Option Not recognized')
 
 
 if __name__ == '__main__':
