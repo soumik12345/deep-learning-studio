@@ -24,3 +24,8 @@ def visualize_classification_prediction(prediction):
     return figure
 
 
+def get_model_summary(model):
+    string_list = []
+    model.summary(print_fn=lambda x: string_list.append(x))
+    model_summary = "<br>".join(string_list)
+    return model_summary

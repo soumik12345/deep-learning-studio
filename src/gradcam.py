@@ -9,7 +9,7 @@ class GradCam:
     def __init__(
             self, model, preprocess_function,
             decode_prediction_function, last_layer, classifier_layers, size):
-        self.model = model(weights="imagenet")
+        self.model = model
         self.preprocess_function = preprocess_function
         self.decode_prediction_function = decode_prediction_function
         self.last_layer = last_layer
