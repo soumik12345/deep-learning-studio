@@ -1,5 +1,6 @@
 .idea/
 test.py
 dump.txt
+.DS_Store
 src/__pycache__/
 application/inference/__pycache__/
